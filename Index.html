@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DATOS DE ALUMNADO</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <h1>Base de Datos de Alumnos</h1>
+
+    <button class="show-modal">Registrar Alumno</button>
+    <div class="modal hidden">
+        <button class="close-modal">&times;</button>
+
+        <h2>Información del Alumno</h2>
+        <label for="" class="registrarAlumno">Nombre:</label>
+        <input type="text" class="nombreAlumno" id="nombre" placeholder="Nombre del alumno">
+        <br>
+        <label for="" class="registrarAlumno">Apellido:</label>
+        <input type="text" class="nombreAlumno" id="apellido" placeholder="Apellido del alumno">
+        <br>
+        <label for="" class="registrarAlumno">Edad:</label>
+        <input type="text" class="nombreAlumno" id="edad" placeholder="Edad del alumno">
+        <input type="submit" value="Registrar" onclick="registrar()" />
+        <br>
+        <br>
+    </div>
+
+    <ul id="lista-alumnos">
+        <!-- Aquí se agregará la lista de alumnos -->
+    </ul>
+
+    <button class="grupos">Revisar Grupos</button>
+    <div class="nuevoGrupo hidden">
+        <button class="close-grupo">&times;</button>
+        <label for="" class="crearGrupo">Nuevo grupo:</label>
+        <input type="text" class="nombreGrupo" id="nombreGrupo" placeholder="Nuevo grupo">
+        <input type="submit" value="Crear" onclick="crearGrupo()" />
+
+        <ul id="lista-grupos">
+            <!-- Aquí se agregará la lista de grupos -->
+        </ul>
+        <br>
+        <h2>Inscribir Alumno a Grupo seleccionado</h2>
+        <select name="Seleccionar grupo" id="SelectGrupo"></select>
+        <select name="Seleccionar alumno" id="SelectAlumno"></select>
+        <button id="inscribir-btn">Inscribir Alumno al Grupo</button>
+    </div>
+
+    <button class="calif">Calificaciones</button>
+    <div class="grades hidden">
+        <button class="close-calificaciones">&times;</button>
+
+        <ul id="lista-materias">
+            <!-- Aquí se agregará la lista de grupos -->
+        </ul>
+        <select name="Seleccionar alumno" id="SelectAlumno"></select>
+        <select name="Seleccionar materia" id="SelectMateria"></select>
+        <select name="Seleccionar Calificación" id="SelectCalificacion"></select>
+        <button id="calificar-btn">Calificar al alumno</button>
+    </div>
+
+    <input type="button" class="logOut" value="Cerrar Sesión" id="btn4" onclick="logOut()">
+
+    <div class="overlay hidden"></div>
+
+    <script src="./Alumnos.js"></script>
+</body>
+
+</html>
